@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import Categories from './pages/Catagories'
 import { Routes, Route } from 'react-router-dom'
 import CategoryDetail from './components/CategoryDetail'
+import About from './pages/About'
+
 
 const App = () => {
 	return (
@@ -13,6 +15,9 @@ const App = () => {
 				<Route path='/' element={<Home />} />
 				<Route path='/categories' element={<Categories />} />
 				<Route path='/categories/:id' element={<CategoryDetail />} />
+				<Route path ='/about' element={<About/>} /> 
+				
+				
 			</Routes>
 			<Footer />
 		</div>

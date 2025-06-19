@@ -1,6 +1,7 @@
 import { FaTelegram } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
 import Logo from './Logo'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
 	return (
@@ -28,7 +29,7 @@ const Footer = () => {
 							}}
 						>
 							<Logo />
-							<a href='#'>Biz haqimizda</a>
+							<Link to='/about'>Biz haqimizda</Link>
 							<a href='#'>Biz bilan bog'lanish</a>
 						</div>
 						<div>
