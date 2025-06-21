@@ -1,12 +1,12 @@
-function ShortCard() {
+function ShortCard({ title, item }) {
 	return (
 		<div className='short-card-item'>
 			<div className='card-number'>
-				<h2>1</h2>
+				<h2>{item}</h2>
 			</div>
 			<div className='card-info'>
 				<span className='card-category'>Fantastika</span>
-				<h3>Lorem, ipsum dolor.</h3>
+				<h3>{title.length > 20 ? `${title.slice(0, 20)}...` : title}</h3>
 			</div>
 		</div>
 	)

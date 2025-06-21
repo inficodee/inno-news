@@ -1,19 +1,21 @@
-const NewsCard = () => {
+import { Link } from 'react-router-dom'
+
+const NewsCard = ({ image, name, date, link }) => {
 	return (
-		<div className='card'>
+		<Link to={`/post/${link}`} className='card'>
 			<div className='card-image'>
-				<img src='https://picsum.photos/350/200' alt='news-image' />
+				<img src={image | 'https://picsum.photos/250/200'} alt='news-image' />
 				<div className='news-text'>
 					<span className='news-info'>
-						<p className='date'>12/06/2025, 19:05</p>
+						<p className='date'>{date}</p>
 						<p className='tag'>Fantastika</p>
 					</span>
 				</div>
 			</div>
 			<div className='card-title'>
-				<h2>hello news</h2>
+				<h2>{name?.length > 15 ? `${name.slice(0, 15)}...` : name}</h2>
 			</div>
-		</div>
+		</Link>
 	)
 }
 

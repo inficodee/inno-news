@@ -3,7 +3,7 @@ import NewsCard from './NewsCard'
 import AliceCarousel from 'react-alice-carousel'
 import { useRef } from 'react'
 
-const CategoryCarousel = () => {
+const CategoryCarousel = ({ name }) => {
 	const carouselRef = useRef(null)
 
 	const handleDragStart = e => e.preventDefault()
@@ -28,7 +28,7 @@ const CategoryCarousel = () => {
 	return (
 		<div className='category-carousel'>
 			<div className='title'>
-				<h1>Fantastika</h1>
+				<h1>{name}</h1>
 				<div className='control-btns'>
 					<button onClick={() => carouselRef.current.slidePrev()}>
 						<FaAngleLeft />
